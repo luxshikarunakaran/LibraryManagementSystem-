@@ -40,15 +40,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtEnrollNo = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtStuname = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnissueBook = new System.Windows.Forms.Button();
             this.cmbBookName = new System.Windows.Forms.ComboBox();
             this.dateTimePickerIssueDate = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtStuName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtcontact = new System.Windows.Forms.TextBox();
@@ -58,6 +56,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -182,15 +182,15 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel3.Controls.Add(this.txtEnrollNo);
+            this.panel3.Controls.Add(this.txtSId);
             this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.txtStuname);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.btnissueBook);
             this.panel3.Controls.Add(this.cmbBookName);
             this.panel3.Controls.Add(this.dateTimePickerIssueDate);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.txtStuName);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.txtcontact);
@@ -205,24 +205,14 @@
             this.panel3.Size = new System.Drawing.Size(426, 459);
             this.panel3.TabIndex = 2;
             // 
-            // txtEnrollNo
+            // txtStuname
             // 
-            this.txtEnrollNo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEnrollNo.Location = new System.Drawing.Point(179, 17);
-            this.txtEnrollNo.Name = "txtEnrollNo";
-            this.txtEnrollNo.ReadOnly = true;
-            this.txtEnrollNo.Size = new System.Drawing.Size(237, 27);
-            this.txtEnrollNo.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 71);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 19);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Enroll No";
+            this.txtStuname.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStuname.Location = new System.Drawing.Point(179, 63);
+            this.txtStuname.Name = "txtStuname";
+            this.txtStuname.ReadOnly = true;
+            this.txtStuname.Size = new System.Drawing.Size(237, 27);
+            this.txtStuname.TabIndex = 5;
             // 
             // label11
             // 
@@ -240,10 +230,10 @@
             this.btnissueBook.BackColor = System.Drawing.Color.LemonChiffon;
             this.btnissueBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnissueBook.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnissueBook.Location = new System.Drawing.Point(317, 388);
+            this.btnissueBook.Location = new System.Drawing.Point(317, 387);
             this.btnissueBook.Name = "btnissueBook";
             this.btnissueBook.Size = new System.Drawing.Size(99, 33);
-            this.btnissueBook.TabIndex = 13;
+            this.btnissueBook.TabIndex = 12;
             this.btnissueBook.Text = "Issue Book";
             this.btnissueBook.UseVisualStyleBackColor = false;
             this.btnissueBook.Click += new System.EventHandler(this.btnissueBook_Click);
@@ -253,24 +243,24 @@
             this.cmbBookName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBookName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBookName.FormattingEnabled = true;
-            this.cmbBookName.Location = new System.Drawing.Point(179, 294);
+            this.cmbBookName.Location = new System.Drawing.Point(179, 295);
             this.cmbBookName.Name = "cmbBookName";
             this.cmbBookName.Size = new System.Drawing.Size(237, 27);
-            this.cmbBookName.TabIndex = 11;
+            this.cmbBookName.TabIndex = 10;
             // 
             // dateTimePickerIssueDate
             // 
             this.dateTimePickerIssueDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerIssueDate.Location = new System.Drawing.Point(179, 344);
+            this.dateTimePickerIssueDate.Location = new System.Drawing.Point(179, 345);
             this.dateTimePickerIssueDate.Name = "dateTimePickerIssueDate";
             this.dateTimePickerIssueDate.Size = new System.Drawing.Size(237, 27);
-            this.dateTimePickerIssueDate.TabIndex = 12;
+            this.dateTimePickerIssueDate.TabIndex = 11;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(23, 352);
+            this.label9.Location = new System.Drawing.Point(23, 353);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(114, 19);
             this.label9.TabIndex = 32;
@@ -280,26 +270,17 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(26, 302);
+            this.label10.Location = new System.Drawing.Point(26, 303);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 19);
             this.label10.TabIndex = 30;
             this.label10.Text = "Book Name";
             // 
-            // txtStuName
-            // 
-            this.txtStuName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStuName.Location = new System.Drawing.Point(179, 63);
-            this.txtStuName.Name = "txtStuName";
-            this.txtStuName.ReadOnly = true;
-            this.txtStuName.Size = new System.Drawing.Size(237, 27);
-            this.txtStuName.TabIndex = 6;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(23, 25);
+            this.label8.Location = new System.Drawing.Point(23, 71);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 19);
             this.label8.TabIndex = 28;
@@ -309,7 +290,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(23, 250);
+            this.label7.Location = new System.Drawing.Point(23, 251);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 19);
             this.label7.TabIndex = 27;
@@ -318,44 +299,44 @@
             // txtcontact
             // 
             this.txtcontact.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontact.Location = new System.Drawing.Point(179, 200);
+            this.txtcontact.Location = new System.Drawing.Point(179, 201);
             this.txtcontact.Name = "txtcontact";
             this.txtcontact.ReadOnly = true;
             this.txtcontact.Size = new System.Drawing.Size(237, 27);
-            this.txtcontact.TabIndex = 9;
+            this.txtcontact.TabIndex = 8;
             // 
             // txtemail
             // 
             this.txtemail.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemail.Location = new System.Drawing.Point(179, 244);
+            this.txtemail.Location = new System.Drawing.Point(179, 245);
             this.txtemail.Name = "txtemail";
             this.txtemail.ReadOnly = true;
             this.txtemail.Size = new System.Drawing.Size(237, 27);
-            this.txtemail.TabIndex = 10;
+            this.txtemail.TabIndex = 9;
             // 
             // txtSemester
             // 
             this.txtSemester.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSemester.Location = new System.Drawing.Point(179, 155);
+            this.txtSemester.Location = new System.Drawing.Point(179, 156);
             this.txtSemester.Name = "txtSemester";
             this.txtSemester.ReadOnly = true;
             this.txtSemester.Size = new System.Drawing.Size(237, 27);
-            this.txtSemester.TabIndex = 8;
+            this.txtSemester.TabIndex = 7;
             // 
             // txtdepartment
             // 
             this.txtdepartment.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdepartment.Location = new System.Drawing.Point(179, 108);
+            this.txtdepartment.Location = new System.Drawing.Point(179, 109);
             this.txtdepartment.Name = "txtdepartment";
             this.txtdepartment.ReadOnly = true;
             this.txtdepartment.Size = new System.Drawing.Size(237, 27);
-            this.txtdepartment.TabIndex = 7;
+            this.txtdepartment.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 205);
+            this.label6.Location = new System.Drawing.Point(23, 206);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 19);
             this.label6.TabIndex = 24;
@@ -365,7 +346,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 158);
+            this.label4.Location = new System.Drawing.Point(23, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 19);
             this.label4.TabIndex = 21;
@@ -375,11 +356,30 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 111);
+            this.label3.Location = new System.Drawing.Point(23, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 19);
             this.label3.TabIndex = 19;
             this.label3.Text = "Department";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(23, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 19);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Student ID";
+            // 
+            // txtSId
+            // 
+            this.txtSId.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSId.Location = new System.Drawing.Point(179, 19);
+            this.txtSId.Name = "txtSId";
+            this.txtSId.ReadOnly = true;
+            this.txtSId.Size = new System.Drawing.Size(237, 27);
+            this.txtSId.TabIndex = 34;
             // 
             // IssuueBook
             // 
@@ -419,7 +419,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtStuName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtcontact;
@@ -435,7 +434,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnissueBook;
         private System.Windows.Forms.ComboBox cmbBookName;
-        private System.Windows.Forms.TextBox txtEnrollNo;
+        private System.Windows.Forms.TextBox txtStuname;
+        private System.Windows.Forms.TextBox txtSId;
         private System.Windows.Forms.Label label5;
     }
 }

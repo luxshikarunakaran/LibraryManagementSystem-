@@ -28,9 +28,6 @@ namespace LibraryManagementSystem_
         public virtual DbSet<loginTable> loginTables { get; set; }
         public virtual DbSet<NewStudent> NewStudents { get; set; }
         public virtual DbSet<IssueBook> IssueBooks { get; set; }
-        public virtual DbSet<ReturnBook> ReturnBooks { get; set; }
-        public virtual DbSet<IRBook> IRBooks { get; set; }
-        public virtual DbSet<IssueeBook> IssueeBooks { get; set; }
-        public virtual DbSet<IssuBook> IssuBooks { get; set; }
+        public virtual DbSet<IRBook1> IRBook1 { get; set; }
     }
 }

@@ -64,7 +64,7 @@ namespace LibraryManagementSystem_
                 // Code to count how many books has been issued on this enrollment number
 
 
-                cmd.CommandText = "select count(EnrollNo) from ReturnBook where EnrollNo='" + EId + "' and BookReturnDate is null";
+                cmd.CommandText = "select count(EnrollNo) from IRBook where EnrollNo='" + EId + "' and BookReturnDate is null";
                 SqlDataAdapter DA1 = new SqlDataAdapter(cmd);
                 DataSet ds1 = new DataSet();
                 DA1.Fill(ds1);
@@ -80,44 +80,39 @@ namespace LibraryManagementSystem_
 
                 if (ds.Tables[0].Rows.Count != 0)
                 {
-                    //txtSId.Text = ds.Tables[0].Rows[0][1].ToString();
-                    txtEnrollNo.Text= ds.Tables[0].Rows[0][1].ToString();
-                    txtStuName.Text = ds.Tables[0].Rows[0][2].ToString();
+                    txtSId.Text= ds.Tables[0].Rows[0][0].ToString();
+                    txtStuname.Text= ds.Tables[0].Rows[0][1].ToString();
                     txtdepartment.Text = ds.Tables[0].Rows[0][3].ToString();
                     txtSemester.Text = ds.Tables[0].Rows[0][4].ToString();
                     txtcontact.Text = ds.Tables[0].Rows[0][5].ToString();
                     txtemail.Text = ds.Tables[0].Rows[0][6].ToString();
-                   // txtemail.Text = ds.Tables[0].Rows[0][7].ToString();
-                   // dateTimePickerIssueDate.Text= ds.Tables[0].Rows[0][6].ToString();
                 }
                 else
                 {
-                    txtEnrollNo.Clear();
-                    txtStuName.Clear();
+                    txtSId.Clear();
+                    txtStuname.Clear();
                     txtdepartment.Clear();
                     txtSemester.Clear();
                     txtcontact.Clear();
                     txtemail.Clear();
 
-                    MessageBox.Show("Invalid Enroll No","Ërror",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid Enroll No","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
         }
 
         private void btnissueBook_Click(object sender, EventArgs e)
         {
-            if (txtStuName.Text != "")
+            if (txtStuname.Text != "")
             {
                 if(cmbBookName.SelectedIndex != -1 && count<=2)
                 {
-                    //Int64 SId =Convert.ToInt64(txtSId.Text);
-                 //   String SId = txtSId.Text;
-                    String EntrollNo = txtEnrollNo.Text;
-                    String StudentName = txtStuName.Text;
+                    int SId=Convert.ToInt32(txtSId.Text);
+                    String EnrollNo=txtenterenrollno.Text;  
+                    String StudentName = txtStuname.Text;
                     String Department=txtdepartment.Text;
                     String Semester=txtSemester.Text;
-                     Int64 ContactNo=Int64.Parse(txtcontact.Text);
-                   // String ContactNo = txtcontact.Text;
+                    Int64 ContactNo=Int64.Parse(txtcontact.Text);
                     String Email = txtemail.Text;
                     String BookName = cmbBookName.Text;
                     String BookIssueDate=dateTimePickerIssueDate.Text;
@@ -131,7 +126,7 @@ namespace LibraryManagementSystem_
                     cmd.Connection = con;
                     con.Open();
 
-                    cmd.CommandText = "insert into IssuBook (EnrollNo,StudentName,Department,Semester,ContactNo,Email,BookName,BookIssueDate) values ('" + EntrollNo + "','" + StudentName + "','"+ Department + "','" + Semester + "','"+ ContactNo + "','"+ Email + "','"+ BookName + "','"+ BookIssueDate + "')";
+                    cmd.CommandText = "insert into IRBook (SId,EnrollNo,StudentName,Department,Semester,ContactNo,Email,BookName,BookIssueDate) values (" + SId + ",'" + EnrollNo + "','" + StudentName + "','"+ Department + "','" + Semester + "',"+ ContactNo + ",'"+ Email + "','"+ BookName + "','"+ BookIssueDate + "')";
                     cmd.ExecuteNonQuery();
                     con.Close();
 
@@ -154,8 +149,7 @@ namespace LibraryManagementSystem_
         {
             if (txtenterenrollno.Text == "")
             {
-                txtEnrollNo.Clear();
-                txtStuName.Clear();
+                txtStuname.Clear();
                 txtdepartment.Clear();
                 txtSemester.Clear();
                 txtcontact.Clear();

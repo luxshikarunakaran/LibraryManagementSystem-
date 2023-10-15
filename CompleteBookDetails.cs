@@ -25,14 +25,14 @@ namespace LibraryManagementSystem_
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "select * from ReturnBook where BookReturnBook is null";
+            cmd.CommandText = "select * from IRBook where BookReturnDate is null";
             SqlDataAdapter da= new SqlDataAdapter(cmd);
             DataSet ds=new DataSet();
             da.Fill(ds);
 
             dataGridView1.DataSource= ds.Tables[0];
 
-            cmd.CommandText = "select * from ReturnBook where BookReturnDate is not null";
+            cmd.CommandText = "select * from IRBook where BookReturnDate is not null";
             SqlDataAdapter da1 = new SqlDataAdapter(cmd);
             DataSet ds1 = new DataSet();
             da.Fill(ds1);

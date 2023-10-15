@@ -27,7 +27,7 @@ namespace LibraryManagementSystem_
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "select * from ReturnBook where EnrollNo = '"+txtEnterEnrollNo.Text+"' and BookReturnDate IS NULL";
+            cmd.CommandText = "select * from IRBook where EnrollNo = '"+txtEnterEnrollNo.Text+"' and BookReturnDate IS NULL";
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -51,14 +51,25 @@ namespace LibraryManagementSystem_
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             con.Open();
-            cmd.CommandText = "update ReturnBook set BookReturnDate='" + dateTimePickerReturnDate.Text + "' where EnrollNo='"+txtEnterEnrollNo.Text+"' and SId='"+rowid+"'";
+
+            cmd.CommandText = "update IRBook set BookReturnDate='" + dateTimePickerReturnDate.Text + "' where EnrollNo='"+txtEnterEnrollNo.Text+"' and SId="+rowid+"";
             cmd.ExecuteNonQuery();
             con.Close();
 
             MessageBox.Show("Return Succesful.","Sucess",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
             ReturnBook1_Load(this, null);
 
         }
+
+
+        private void ReturnBook1_Load(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+            txtEnterEnrollNo.Clear();
+        }
+
+
 
         String BookName;
         String BookIssueDate;
@@ -66,11 +77,12 @@ namespace LibraryManagementSystem_
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             panel2.Visible = true;
+
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-                rowid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-                BookName = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                BookIssueDate = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                rowid = Int64.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                BookName = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                BookIssueDate = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
                 //  MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
 
@@ -79,11 +91,7 @@ namespace LibraryManagementSystem_
 
        }
 
-        private void ReturnBook1_Load(object sender, EventArgs e)
-        {
-            panel2.Visible = false;
-            txtEnterEnrollNo.Clear();
-        }
+       
 
         private void txtEnterEnrollNo_TextChanged(object sender, EventArgs e)
         {

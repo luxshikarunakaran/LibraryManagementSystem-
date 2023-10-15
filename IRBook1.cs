@@ -12,7 +12,7 @@ namespace LibraryManagementSystem_
     using System;
     using System.Collections.Generic;
     
-    public partial class IRBook
+    public partial class IRBook1
     {
         public int SId { get; set; }
         public string EnrollNo { get; set; }

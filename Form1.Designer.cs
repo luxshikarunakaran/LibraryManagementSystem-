@@ -38,7 +38,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnlogin = new System.Windows.Forms.Button();
-            this.btnsignup = new System.Windows.Forms.Button();
             this.pictureBoxInstagram = new System.Windows.Forms.PictureBox();
             this.pictureBoxfacebook = new System.Windows.Forms.PictureBox();
             this.pictureBoxYoutube = new System.Windows.Forms.PictureBox();
@@ -145,7 +144,8 @@
             this.btnlogin.BackColor = System.Drawing.Color.Cyan;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.Location = new System.Drawing.Point(78, 287);
+            this.btnlogin.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnlogin.Location = new System.Drawing.Point(84, 299);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(177, 37);
             this.btnlogin.TabIndex = 9;
@@ -153,24 +153,10 @@
             this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
-            // btnsignup
-            // 
-            this.btnsignup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnsignup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsignup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnsignup.Location = new System.Drawing.Point(78, 330);
-            this.btnsignup.Name = "btnsignup";
-            this.btnsignup.Size = new System.Drawing.Size(177, 33);
-            this.btnsignup.TabIndex = 10;
-            this.btnsignup.Text = "Sign Up";
-            this.btnsignup.UseVisualStyleBackColor = false;
-            this.btnsignup.Click += new System.EventHandler(this.btnsignup_Click);
-            // 
             // pictureBoxInstagram
             // 
             this.pictureBoxInstagram.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInstagram.Image")));
-            this.pictureBoxInstagram.Location = new System.Drawing.Point(78, 434);
+            this.pictureBoxInstagram.Location = new System.Drawing.Point(80, 402);
             this.pictureBoxInstagram.Name = "pictureBoxInstagram";
             this.pictureBoxInstagram.Size = new System.Drawing.Size(44, 50);
             this.pictureBoxInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -181,7 +167,7 @@
             // pictureBoxfacebook
             // 
             this.pictureBoxfacebook.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxfacebook.Image")));
-            this.pictureBoxfacebook.Location = new System.Drawing.Point(140, 434);
+            this.pictureBoxfacebook.Location = new System.Drawing.Point(142, 402);
             this.pictureBoxfacebook.Name = "pictureBoxfacebook";
             this.pictureBoxfacebook.Size = new System.Drawing.Size(48, 50);
             this.pictureBoxfacebook.TabIndex = 12;
@@ -191,7 +177,7 @@
             // pictureBoxYoutube
             // 
             this.pictureBoxYoutube.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxYoutube.Image")));
-            this.pictureBoxYoutube.Location = new System.Drawing.Point(209, 434);
+            this.pictureBoxYoutube.Location = new System.Drawing.Point(211, 402);
             this.pictureBoxYoutube.Name = "pictureBoxYoutube";
             this.pictureBoxYoutube.Size = new System.Drawing.Size(46, 50);
             this.pictureBoxYoutube.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -222,20 +208,19 @@
             this.groupBox1.Controls.Add(this.btnclose);
             this.groupBox1.Controls.Add(this.pictureBoxInstagram);
             this.groupBox1.Controls.Add(this.btnlogin);
-            this.groupBox1.Controls.Add(this.btnsignup);
             this.groupBox1.Location = new System.Drawing.Point(2, -2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(329, 495);
+            this.groupBox1.Size = new System.Drawing.Size(329, 471);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             // 
             // btnexit
             // 
-            this.btnexit.BackColor = System.Drawing.Color.LavenderBlush;
+            this.btnexit.BackColor = System.Drawing.Color.Lavender;
             this.btnexit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnexit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexit.ForeColor = System.Drawing.Color.Olive;
-            this.btnexit.Location = new System.Drawing.Point(78, 369);
+            this.btnexit.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnexit.Location = new System.Drawing.Point(84, 342);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(177, 33);
             this.btnexit.TabIndex = 15;
@@ -248,7 +233,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(35)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(333, 494);
+            this.ClientSize = new System.Drawing.Size(333, 468);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtpassword);
@@ -286,7 +271,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnlogin;
-        private System.Windows.Forms.Button btnsignup;
         private System.Windows.Forms.PictureBox pictureBoxInstagram;
         private System.Windows.Forms.PictureBox pictureBoxfacebook;
         private System.Windows.Forms.PictureBox pictureBoxYoutube;
